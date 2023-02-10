@@ -1,6 +1,6 @@
 <script>
 	import Header from './Header.svelte';
-	import './styles.css';
+	import './styles.postcss';
 </script>
 
 <div class="app">
