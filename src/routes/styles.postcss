@@ -1,3 +1,4 @@
+@import '@acab/reset.css';
 @import url('../lib/styles/fonts.postcss');
 
 @custom-media --viewport-sm (width >= 640px);
@@ -15,6 +16,8 @@
 	--color-primary: lch(20% 108 300);
 	--color-accent: lch(88% 104 86);
 	--color-neutral: lch(25% 5 300);
+	/* The color of the outline for elements in focus */
+	--focus-color: var(--color-accent);
 }
 
 body {
@@ -49,14 +52,6 @@ a {
 	}
 }
 
-.visually-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: auto;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
+html {
+	color-scheme: light;
 }

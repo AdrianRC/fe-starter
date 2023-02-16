@@ -13,6 +13,26 @@
 </svelte:head>
 
 <div>
+	<h1>Title really long title this is my title</h1>
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestias quibusdam expedita
+		animi molestiae! Eius vitae error nisi laborum quae perspiciatis cupiditate nihil, libero
+		possimus quasi eligendi eum corporis iste?
+	</p>
+
+	<p>
+		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam a veritatis quia, aliquam magnam
+		reiciendis in facere odit fugiat totam aliquid eaque hic tempore temporibus adipisci molestiae
+		perferendis, expedita iure. Itaque praesentium sapiente, maiores obcaecati eligendi eveniet,
+		nemo nam doloremque libero quae, aliquid aut. Iste ipsa ullam rem aliquam recusandae quidem ab
+		reprehenderit voluptatibus, eveniet est expedita voluptas quia sint! Atque neque maxime
+		explicabo dolores maiores quod voluptates ipsa? Similique distinctio laudantium cupiditate
+		architecto ad illo, voluptatum id iure dolorem sed voluptate doloribus cumque hic mollitia
+		eveniet reprehenderit nisi repudiandae?
+	</p>
+</div>
+
+<div>
 	<h1>Front-end starter kit</h1>
 	<p><a href="https://kit.svelte.dev">SvelteKit docs</a></p>
 	SVG example<img src={logo} alt="Svelte logo" />
@@ -52,3 +72,5 @@
 		{/if}
 	</section>
 </div>
+
+<div class="visually-hidden">I'm invisible to users but not to screen readers</div>
