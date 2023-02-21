@@ -1,0 +1,45 @@
+query PostContent($slug: String) {
+	site: _site {
+		favicon: faviconMetaTags {
+			attributes
+			content
+			tag
+		}
+	}
+
+	post(filter: { slug: { eq: $slug } }) {
+		seo: _seoMetaTags {
+			attributes
+			content
+			tag
+		}
+		title
+		slug
+		content {
+			...StructuredTextFragment
+		}
+		date
+		ogImage: coverImage {
+			url(imgixParams: { fm: jpg, fit: crop, w: 2000, h: 1000 })
+		}
+		coverImage {
+			...ImageFragment
+		}
+		author {
+			...AuthorFragment
+		}
+	}
+
+	morePosts: allPosts(orderBy: date_DESC, first: 2, filter: { slug: { neq: $slug } }) {
+		title
+		slug
+		excerpt
+		date
+		coverImage {
+			...ImageFragment
+		}
+		author {
+			...AuthorFragment
+		}
+	}
+}
