@@ -17,12 +17,12 @@
 
 <Head {headTags} />
 
-{#each allPosts as post}
-	<a href="/posts/{post.slug}">
-		{#if post.coverImage}
-			<CoverImage coverImage={post.coverImage} title={post.title} />
+{#each allPosts as { slug, coverImage, title, excerpt, date }}
+	<a href="/posts/{slug}">
+		{#if coverImage}
+			<CoverImage {coverImage} {title} />
 		{/if}
-		<h3>{post.title} - {post.date}</h3>
-		<p>{post.excerpt}</p>
+		<h3>{title} - {date}</h3>
+		<p>{excerpt}</p>
 	</a>
 {/each}
