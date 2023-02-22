@@ -1,6 +1,14 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
+
+	const links = [
+		{ href: '/', label: 'Home' },
+		{ href: '/static', label: 'Static' },
+		{ href: '/posts', label: 'Posts' },
+		{ href: '/gsap', label: 'GSAP' },
+		{ href: '/three', label: 'THREE' }
+	];
 </script>
 
 <header>
@@ -15,21 +23,11 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/static' ? 'page' : undefined}>
-				<a href="/static">Static</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/posts' ? 'page' : undefined}>
-				<a href="/posts">Posts</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/gsap') ? 'page' : undefined}>
-				<a href="/gsap">GSAP</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/three' ? 'page' : undefined}>
-				<a href="/three">THREE</a>
-			</li>
+			{#each links as { href, label }}
+				<li aria-current={$page.url.pathname === href ? 'page' : undefined}>
+					<a {href}>{label}</a>
+				</li>
+			{/each}
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
