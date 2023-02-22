@@ -147,7 +147,7 @@
 	export let intersectionThreshold = 0;
 
 	/** Margin around the placeholder. Can have values similar to the CSS margin property (top, right, bottom, left). The values can be percentages. This set of values serves to grow or shrink each side of the placeholder element's bounding box before computing intersections */
-	export let intersectionMargin: '0px';
+	export let intersectionMargin = '0px';
 
 	/** Whether enable lazy loading or not */
 	let rawLazyLoad = true;

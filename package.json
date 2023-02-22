@@ -43,7 +43,6 @@
 	"type": "module",
 	"dependencies": {
 		"@acab/reset.css": "^0.5.3",
-		"date-fns": "^2.29.3",
 		"datocms-structured-text-utils": "^2.0.4",
 		"universal-base64": "^2.1.0"
 	},

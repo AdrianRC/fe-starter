@@ -1,11 +1,7 @@
 <script lang="ts">
-	import type { PageData } from './$houdini';
-
-	import Container from '$lib/components/Container.svelte';
-	import Intro from '$lib/components/Intro.svelte';
-	import HeroPost from '$lib/components/HeroPost.svelte';
-	import MoreStories from '$lib/components/MoreStories.svelte';
 	import Head from '$lib/components/Head.svelte';
+	import CoverImage from '$lib/components/CoverImage.svelte';
+	import type { PageData } from './$houdini';
 
 	export let data: PageData;
 
@@ -16,28 +12,17 @@
 		blog: null
 	});
 
-	$: heroPost = allPosts[0];
-	$: morePosts = allPosts.slice(1);
 	$: headTags = blog && site ? blog.seo.concat(site.favicon) : [];
 </script>
 
 <Head {headTags} />
 
-<Container>
-	<Intro />
-
-	{#if heroPost}
-		<HeroPost
-			title={heroPost.title}
-			coverImage={heroPost.coverImage}
-			date={heroPost.date}
-			author={heroPost.author}
-			slug={heroPost.slug}
-			excerpt={heroPost.excerpt}
-		/>
-	{/if}
-
-	{#if morePosts.length > 0}
-		<MoreStories posts={morePosts} />
-	{/if}
-</Container>
+{#each allPosts as post}
+	<a href="/posts/{post.slug}">
+		{#if post.coverImage}
+			<CoverImage coverImage={post.coverImage} title={post.title} />
+		{/if}
+		<h3>{post.title} - {post.date}</h3>
+		<p>{post.excerpt}</p>
+	</a>
+{/each}

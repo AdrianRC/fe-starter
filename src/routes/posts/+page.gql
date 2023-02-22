@@ -1,12 +1,4 @@
 query HomeContent {
-	site: _site {
-		favicon: faviconMetaTags {
-			attributes
-			content
-			tag
-		}
-	}
-
 	blog {
 		seo: _seoMetaTags {
 			attributes
@@ -14,7 +6,6 @@ query HomeContent {
 			tag
 		}
 	}
-
 	allPosts(orderBy: date_DESC, first: 20) {
 		title
 		slug
@@ -23,8 +14,12 @@ query HomeContent {
 		coverImage {
 			...ImageFragment
 		}
-		author {
-			...AuthorFragment
+	}
+	site: _site {
+		favicon: faviconMetaTags {
+			attributes
+			content
+			tag
 		}
 	}
 }

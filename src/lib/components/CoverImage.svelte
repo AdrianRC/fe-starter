@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { fragment, graphql, ImageFragment } from '$houdini';
-
 	import Image from './Image.svelte';
 
-	export let coverImage: ImageFragment;
 	export let title: string | null = null;
 	export let slug: string | null = null;
+	export let coverImage: ImageFragment;
 
 	$: coverImageFragment = fragment(
 		coverImage,
@@ -24,7 +23,7 @@
 	);
 </script>
 
-<div class="-mx-5 sm:mx-0">
+<div>
 	{#if slug}
 		<a href={`/posts/${slug}`} aria-label={title}>
 			<Image
@@ -32,7 +31,6 @@
 					...$coverImageFragment.responsiveImage,
 					alt: `Cover Image for ${title}`
 				}}
-				class="shadow-small hover:shadow-medium transition-shadow duration-200"
 			/>
 		</a>
 	{:else}
@@ -41,7 +39,6 @@
 				...$coverImageFragment.responsiveImage,
 				alt: `Cover Image for ${title}`
 			}}
-			class="shadow-small"
 		/>
 	{/if}
 </div>
