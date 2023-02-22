@@ -44,6 +44,7 @@
 	"dependencies": {
 		"@acab/reset.css": "^0.5.3",
 		"datocms-structured-text-utils": "^2.0.4",
+		"gsap": "^3.11.4",
 		"universal-base64": "^2.1.0"
 	},
 	"browserslist": "> 0.5%, last 2 Chrome major versions, last 2 Firefox major versions, last 2 Safari major versions, last 2 iOS major versions, not dead"

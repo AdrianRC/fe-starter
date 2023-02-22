@@ -24,6 +24,9 @@
 			<li aria-current={$page.url.pathname === '/posts' ? 'page' : undefined}>
 				<a href="/posts">Posts</a>
 			</li>
+			<li aria-current={$page.url.pathname.startsWith('/gsap') ? 'page' : undefined}>
+				<a href="/gsap">GSAP</a>
+			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
@@ -99,7 +102,7 @@
 		top: 0;
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
+		border-top: var(--size) solid var(--color-primary);
 	}
 
 	nav a {
@@ -116,7 +119,7 @@
 		transition: color 0.2s linear;
 	}
 
-	a:hover {
-		color: var(--color-theme-1);
+	li[aria-current='page'] {
+		text-decoration: underline;
 	}
 </style>
