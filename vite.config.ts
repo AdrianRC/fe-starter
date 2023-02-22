@@ -6,5 +6,8 @@ export default defineConfig({
 	plugins: [houdini(), sveltekit()],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	ssr: {
+		noExternal: ['three', 'troika-three-text']
 	}
 });
