@@ -10,7 +10,7 @@
 		"sourceMap": true,
 		"strict": true,
 		"preserveValueImports": false,
-    "moduleResolution": "Bundler",
+		"moduleResolution": "Bundler",
 		"rootDirs": [".", "./.svelte-kit/types", "./$houdini/types"]
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
