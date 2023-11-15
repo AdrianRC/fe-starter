@@ -1,6 +1,7 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import { preprocessThrelte } from '@threlte/preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,11 +11,15 @@ const config = {
 		vitePreprocess(),
 		preprocess({
 			postcss: true
-		})
+		}),
+		preprocessThrelte()
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			$houdini: './$houdini'
+		}
 	}
 };
 
