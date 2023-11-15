@@ -17,8 +17,18 @@
 	--color-primary: lch(20% 108 300);
 	--color-accent: lch(88% 104 86);
 	--color-neutral: lch(25% 5 300);
-	/* The color of the outline for elements in focus */
-	--focus-color: var(--color-accent);
+}
+
+html {
+	/* Supported color schemes, add both if you support them */
+	color-scheme: light;
+}
+
+:focus-visible {
+	/* The color of the outline for elements in focus,
+     if left blank, it will use CanvasText 
+     which is a system color that adapts to the color scheme */
+	outline-color: var(--color-accent);
 }
 
 body {
@@ -51,8 +61,4 @@ a {
 			color: green;
 		}
 	}
-}
-
-html {
-	color-scheme: light;
 }
