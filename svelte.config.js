@@ -15,6 +15,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+    prerender: {
+      entries: ['/en/static', '/es/static']
+    },
 		alias: {
 			$houdini: './$houdini'
 		}
