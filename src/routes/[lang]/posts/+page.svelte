@@ -18,7 +18,7 @@
 <Head {headTags} />
 
 {#each allPosts as { slug, coverImage, title, excerpt, date }}
-	<a href="/posts/{slug}">
+	<a href="posts/{slug}">
 		{#if coverImage}
 			<CoverImage {coverImage} {title} />
 		{/if}

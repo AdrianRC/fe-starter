@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "paraglide-js compile --project ./project.inlang.json && vite build",
 		"preview": "vite preview",
 		"test": "pnpm run test:integration && pnpm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -12,7 +12,8 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"compile": "paraglide-js compile --project ./project.inlang.json"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.39.0",
@@ -53,7 +54,8 @@
 		"datocms-structured-text-utils": "^2.0.4",
 		"gsap": "^3.12.2",
 		"three": "^0.158.0",
-		"universal-base64": "^2.1.0"
+		"universal-base64": "^2.1.0",
+		"@inlang/paraglide-js": "1.0.0-prerelease.9"
 	},
 	"browserslist": "> 0.5%, last 2 Chrome major versions, last 2 Firefox major versions, last 2 Safari major versions, last 2 iOS major versions, not dead"
 }

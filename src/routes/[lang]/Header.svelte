@@ -1,13 +1,16 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
+	import { languageTag, setLanguageTag, availableLanguageTags } from '../../paraglide/runtime';
+
+	$: currentLang = languageTag();
 
 	const links = [
-		{ href: '/', label: 'Home' },
-		{ href: '/static', label: 'Static' },
-		{ href: '/posts', label: 'Posts' },
-		{ href: '/gsap', label: 'GSAP' },
-		{ href: '/three', label: 'THREE' }
+		{ path: '', label: 'Home' },
+		{ path: '/static', label: 'Static' },
+		{ path: '/posts', label: 'Posts' },
+		{ path: '/gsap', label: 'GSAP' },
+		{ path: '/three', label: 'THREE' }
 	];
 </script>
 
@@ -23,9 +26,18 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			{#each links as { href, label }}
-				<li aria-current={$page.url.pathname === href ? 'page' : undefined}>
+			{#each links as { path, label }}
+				{@const href = `/${currentLang}${path}`}
+				<li aria-current={$page.route.id === href ? 'page' : undefined}>
 					<a {href}>{label}</a>
+				</li>
+			{/each}
+			{#each availableLanguageTags as lang}
+				{@const selected = languageTag() === lang}
+				<li>
+					<button class:selected disabled={selected} on:click={() => setLanguageTag(lang)}
+						>{lang}</button
+					>
 				</li>
 			{/each}
 		</ul>
@@ -106,7 +118,7 @@
 		border-top: var(--size) solid var(--color-primary);
 	}
 
-	nav a {
+	nav :is(a, button) {
 		display: flex;
 		height: 100%;
 		align-items: center;
@@ -120,7 +132,12 @@
 		transition: color 0.2s linear;
 	}
 
-	li[aria-current='page'] {
+	li[aria-current='page'],
+	button.selected {
 		text-decoration: underline;
+	}
+
+	button.selected {
+		color: var(--color-primary);
 	}
 </style>

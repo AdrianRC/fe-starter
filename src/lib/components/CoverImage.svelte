@@ -25,7 +25,7 @@
 
 <div>
 	{#if slug}
-		<a href={`/posts/${slug}`} aria-label={title}>
+		<a href={`posts/${slug}`} aria-label={title}>
 			<Image
 				data={{
 					...$coverImageFragment.responsiveImage,
