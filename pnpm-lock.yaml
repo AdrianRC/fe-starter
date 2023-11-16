@@ -8,6 +8,9 @@ dependencies:
   '@acab/reset.css':
     specifier: ^0.8.0
     version: 0.8.0
+  '@datocms/svelte':
+    specifier: ^1.2.0
+    version: 1.2.0
   '@inlang/paraglide-js':
     specifier: 1.0.0-prerelease.9
     version: 1.0.0-prerelease.9
@@ -35,9 +38,6 @@ dependencies:
   three:
     specifier: ^0.158.0
     version: 0.158.0
-  universal-base64:
-    specifier: ^2.1.0
-    version: 2.1.0
 
 devDependencies:
   '@playwright/test':
@@ -61,9 +61,6 @@ devDependencies:
   '@typescript-eslint/parser':
     specifier: ^6.11.0
     version: 6.11.0(eslint@8.53.0)(typescript@5.2.2)
-  csstype:
-    specifier: ^3.1.2
-    version: 3.1.2
   eslint:
     specifier: ^8.53.0
     version: 8.53.0
@@ -100,9 +97,6 @@ devDependencies:
   svelte-check:
     specifier: ^3.6.0
     version: 3.6.0(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.3)
-  svelte-intersection-observer:
-    specifier: ^0.10.1
-    version: 0.10.1
   svelte-preprocess:
     specifier: ^5.1.0
     version: 5.1.0(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.3)(typescript@5.2.2)
@@ -563,6 +557,14 @@ packages:
     dependencies:
       postcss-selector-parser: 6.0.13
     dev: true
+
+  /@datocms/svelte@1.2.0:
+    resolution: {integrity: sha512-hx+HUCEBvh+fjmo57HJ/xc1aNKN+4y0fmZYwjm4qbKYwh1n7gLPpiEBmQClCCZOBUDa6uVRxxn9ELVAbUaMvJQ==}
+    dependencies:
+      datocms-structured-text-utils: 2.0.4
+      svelte-intersection-observer: 0.10.1
+      universal-base64: 2.1.0
+    dev: false
 
   /@envelop/core@4.0.3:
     resolution: {integrity: sha512-O0Vz8E0TObT6ijAob8jYFVJavcGywKThM3UAsxUIBBVPYZTMiqI9lo2gmAnbMUnrDcAYkUTZEW9FDYPRdF5l6g==}
@@ -1997,6 +1999,7 @@ packages:
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
+    dev: false
 
   /data-uri-to-buffer@4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
@@ -3947,7 +3950,7 @@ packages:
 
   /svelte-intersection-observer@0.10.1:
     resolution: {integrity: sha512-hvWZwd0S8t0osA0ChJ4uJDsLvZlULyE3roDEc8mWyeiLT9y25NKT/CKfncsDyS7EGq3B9zb4ZxsH2uNaaXWP4A==}
-    dev: true
+    dev: false
 
   /svelte-preprocess@5.1.0(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.3)(typescript@5.2.2):
     resolution: {integrity: sha512-EkErPiDzHAc0k2MF5m6vBNmRUh338h2myhinUw/xaqsLs7/ZvsgREiLGj03VrSzbY/TB5ZXgBOsKraFee5yceA==}

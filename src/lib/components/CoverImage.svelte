@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fragment, graphql, ImageFragment } from '$houdini';
-	import Image from './Image.svelte';
+	import { Image } from '@datocms/svelte';
 
 	export let title: string | null = null;
 	export let slug: string | null = null;
