@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ParaglideAdapter from '$lib/Paraglide/Adapter.svelte';
+	import ParaglideAdapter from '$lib/components/ParaglideAdapter.svelte';
 </script>
 
 <ParaglideAdapter>
