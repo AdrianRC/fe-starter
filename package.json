@@ -13,7 +13,8 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"compile": "paraglide-js compile --project ./project.inlang.json"
+		"compile": "paraglide-js compile --project ./project.inlang.json",
+		"prepare": "pnpm run check && pnpm run compile && pnpm run format"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.39.0",
