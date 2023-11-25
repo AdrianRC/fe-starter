@@ -7,7 +7,7 @@ const config = {
 		headers: {
 			Authorization: 'env:PUBLIC_DATOCMS_API_TOKEN'
 		},
-		interval: null
+		interval: 0
 	},
 	plugins: {
 		'houdini-svelte': {}
