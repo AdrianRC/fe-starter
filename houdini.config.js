@@ -6,7 +6,8 @@ const config = {
 		url: 'https://graphql.datocms.com/',
 		headers: {
 			Authorization: 'env:PUBLIC_DATOCMS_API_TOKEN'
-		}
+		},
+		interval: null
 	},
 	plugins: {
 		'houdini-svelte': {}
