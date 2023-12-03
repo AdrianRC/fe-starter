@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "paraglide-js compile --project ./project.inlang.json && vite build",
+		"build": "pnpm run compile && vite build",
 		"preview": "vite preview",
 		"test": "pnpm run test:integration && pnpm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -14,8 +14,7 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
 		"compile": "houdini pull-schema && houdini generate && paraglide-js compile --project ./project.inlang.json",
-		"postinstall": "pnpm run compile && pnpm run check && pnpm run format",
-		"pull": "houdini pull-schema"
+		"postinstall": "svelte-kit sync && pnpm run compile"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.40.0",
