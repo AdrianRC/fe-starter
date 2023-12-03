@@ -13,8 +13,8 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"compile": "houdini pull-schema && paraglide-js compile --project ./project.inlang.json",
-		"prepare": "pnpm run check && pnpm run compile && pnpm run format",
+		"compile": "houdini pull-schema && houdini generate && paraglide-js compile --project ./project.inlang.json",
+		"postinstall": "pnpm run compile && pnpm run check && pnpm run format",
 		"pull": "houdini pull-schema"
 	},
 	"devDependencies": {
