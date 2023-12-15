@@ -1,5 +1,0 @@
-{
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"currentLanguage": "The current language is \"{language}\".",
-	"greeting": "Welcome {name}!"
-}

@@ -2,8 +2,6 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import { enhance } from '$app/forms';
 	import type { PageData, ActionData } from './$types';
-	import { languageTag } from '../../paraglide/runtime';
-	import * as m from '../../paraglide/messages';
 
 	export let data: PageData;
 	export let form: ActionData;
@@ -15,8 +13,6 @@
 </svelte:head>
 
 <div>
-	<h1>{m.greeting({ name: data.name || '' })}</h1>
-	<h2>{m.currentLanguage({ language: languageTag() })}</h2>
 	<p>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestias quibusdam expedita
 		animi molestiae! Eius vitae error nisi laborum quae perspiciatis cupiditate nihil, libero

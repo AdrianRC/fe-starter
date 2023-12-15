@@ -8,9 +8,6 @@ export default defineConfig({
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	},
 	ssr: {
-		noExternal: ['three', '@inlang/paraglide-js']
-	},
-	optimizeDeps: {
-		exclude: ['@inlang/paraglide-js']
+		noExternal: ['three']
 	}
 });
