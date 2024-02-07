@@ -5,7 +5,6 @@
 	const links = [
 		{ href: '', label: 'Home' },
 		{ href: '/static', label: 'Static' },
-		{ href: '/posts', label: 'Posts' },
 		{ href: '/gsap', label: 'GSAP' },
 		{ href: '/three', label: 'THREE' }
 	];

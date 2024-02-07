@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "pnpm run compile && vite build",
+		"build": "vite build",
 		"preview": "vite preview",
 		"test": "pnpm run test:integration && pnpm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -12,9 +12,7 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest",
-		"compile": "houdini pull-schema && houdini generate",
-		"postinstall": "svelte-kit sync && pnpm run compile"
+		"test:unit": "vitest"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.40.1",
@@ -28,8 +26,6 @@
 		"eslint": "^8.55.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
-		"houdini": "^1.2.34",
-		"houdini-svelte": "^1.2.34",
 		"postcss": "^8.4.32",
 		"postcss-load-config": "^5.0.2",
 		"postcss-preset-env": "^9.3.0",
@@ -46,13 +42,11 @@
 	"type": "module",
 	"dependencies": {
 		"@acab/reset.css": "^0.8.0",
-		"@datocms/svelte": "^1.2.0",
 		"@theatre/core": "^0.7.0",
 		"@theatre/studio": "^0.7.0",
 		"@threlte/core": "^7.0.12",
 		"@threlte/extras": "^8.0.10",
 		"@threlte/theatre": "^2.1.5",
-		"datocms-structured-text-utils": "^2.0.4",
 		"gsap": "^3.12.4",
 		"three": "^0.159.0"
 	},
