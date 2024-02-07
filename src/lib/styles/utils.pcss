@@ -1,0 +1,26 @@
+.hidden {
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

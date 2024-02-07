@@ -1,5 +1,5 @@
 import { fail } from '@sveltejs/kit';
-import type { PageServerLoad, Actions } from './[lang]/$types';
+import type { PageServerLoad, Actions } from './$types';
 
 const COOKIE_NAME = 'starterkit-name';
 

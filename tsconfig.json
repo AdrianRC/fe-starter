@@ -9,8 +9,7 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"moduleResolution": "Bundler",
-		"rootDirs": [".", "./.svelte-kit/types"]
+		"moduleResolution": "Bundler"
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
