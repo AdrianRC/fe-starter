@@ -3,7 +3,7 @@
 	import logo from '$lib/images/svelte-logo.svg';
 
 	const links = [
-		{ href: '', label: 'Home' },
+		{ href: '/', label: 'Home' },
 		{ href: '/static', label: 'Static' },
 		{ href: '/gsap', label: 'GSAP' },
 		{ href: '/three', label: 'THREE' }
