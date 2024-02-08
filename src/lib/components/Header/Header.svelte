@@ -6,7 +6,8 @@
 		{ href: '/', label: 'Home' },
 		{ href: '/static', label: 'Static' },
 		{ href: '/gsap', label: 'GSAP' },
-		{ href: '/three', label: 'THREE' }
+		{ href: '/three', label: 'THREE' },
+		{ href: '/movies', label: 'Sanity Movies' }
 	];
 </script>
 
