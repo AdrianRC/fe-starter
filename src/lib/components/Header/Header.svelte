@@ -7,7 +7,8 @@
 		{ href: '/static', label: 'Static' },
 		{ href: '/gsap', label: 'GSAP' },
 		{ href: '/three', label: 'THREE' },
-		{ href: '/movies', label: 'Sanity Movies' }
+		{ href: '/movies', label: 'Sanity Movies' },
+		{ href: '/products', label: 'Shopify Products' }
 	];
 </script>
 
