@@ -10,6 +10,14 @@ export async function load() {
           node {
             title
             handle
+            descriptionHtml
+            featuredImage {
+              id
+              url
+              altText
+              height
+              width
+            }
           }
         }
       }
@@ -22,12 +30,7 @@ export async function load() {
 		}
 	});
 
-	const products = data?.products.edges.map((edge) => {
-		return {
-			title: edge.node.title,
-			handle: edge.node.handle
-		};
-	});
+	const products = data?.products.edges.map((edge) => edge.node);
 
 	return { products };
 }

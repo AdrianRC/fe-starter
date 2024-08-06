@@ -10,7 +10,10 @@ export type GetProductsQueryVariables = StorefrontTypes.Exact<{
 
 export type GetProductsQuery = { products: { edges: Array<(
       Pick<StorefrontTypes.ProductEdge, 'cursor'>
-      & { node: Pick<StorefrontTypes.Product, 'title' | 'handle'> }
+      & { node: (
+        Pick<StorefrontTypes.Product, 'title' | 'handle' | 'descriptionHtml'>
+        & { featuredImage?: StorefrontTypes.Maybe<Pick<StorefrontTypes.Image, 'id' | 'url' | 'altText' | 'height' | 'width'>> }
+      ) }
     )> } };
 
 export type GetProductQueryVariables = StorefrontTypes.Exact<{
@@ -24,7 +27,7 @@ export type GetProductQuery = { product?: StorefrontTypes.Maybe<(
   )> };
 
 interface GeneratedQueryTypes {
-  "#graphql\n    query GetProducts($first: Int) {\n      products(first: $first) {\n        edges {\n          cursor\n          node {\n            title\n            handle\n          }\n        }\n      }\n    }\n  ": {return: GetProductsQuery, variables: GetProductsQueryVariables},
+  "#graphql\n    query GetProducts($first: Int) {\n      products(first: $first) {\n        edges {\n          cursor\n          node {\n            title\n            handle\n            descriptionHtml\n            featuredImage {\n              id\n              url\n              altText\n              height\n              width\n            }\n          }\n        }\n      }\n    }\n  ": {return: GetProductsQuery, variables: GetProductsQueryVariables},
   "#graphql\n    query GetProduct($handle: String) {\n      product(handle: $handle) {\n        id\n        handle\n        title\n        descriptionHtml\n        featuredImage {\n          id\n          url\n          altText\n          height\n          width\n        }\n      }\n    }\n  ": {return: GetProductQuery, variables: GetProductQueryVariables},
 }
 
