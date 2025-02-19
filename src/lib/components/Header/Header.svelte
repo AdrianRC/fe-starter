@@ -107,7 +107,7 @@
 		border-top: var(--size) solid var(--color-primary);
 	}
 
-	nav :is(a, button) {
+	nav :is(:global(a, button)) {
 		display: flex;
 		height: 100%;
 		align-items: center;

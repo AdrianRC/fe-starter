@@ -2,7 +2,7 @@
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
 
-	let boxesContainer: HTMLElement | null;
+	let boxesContainer: HTMLElement | null = $state(null);
 	const tl = gsap.timeline({ paused: true });
 
 	const toggleTimeline = () => {
@@ -26,7 +26,7 @@
 <section class="boxes-container" bind:this={boxesContainer}>
 	<h1>Use the button to toggle a Timeline</h1>
 	<div>
-		<button on:click={toggleTimeline}>Toggle Timeline</button>
+		<button onclick={toggleTimeline}>Toggle Timeline</button>
 	</div>
 	<div class="box">Box 1</div>
 	<div class="box">Box 2</div>

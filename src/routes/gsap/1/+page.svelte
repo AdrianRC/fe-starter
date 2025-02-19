@@ -2,7 +2,7 @@
 	import tweenIn from '$lib/transitions/tweenIn';
 	import tweenOut from '$lib/transitions/tweenOut';
 
-	let visible = true;
+	let visible = $state(true);
 	const duration = 1;
 </script>
 
@@ -12,7 +12,7 @@
 </label>
 
 {#if visible}
-	<div class="box" in:tweenIn={duration} out:tweenOut={duration} />
+	<div class="box" in:tweenIn={duration} out:tweenOut={duration}></div>
 {/if}
 
 <style>

@@ -1,13 +1,20 @@
-<script>
+<script lang="ts">
 	import Header from '$lib/components/Header/Header.svelte';
 	import '$lib/styles/app.pcss';
+	import type { Snippet } from 'svelte';
+
+	interface Props {
+		children?: Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <div class="app">
 	<Header />
 
 	<main>
-		<slot />
+		{@render children?.()}
 	</main>
 
 	<footer>

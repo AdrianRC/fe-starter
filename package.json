@@ -58,11 +58,8 @@
 		"@acab/reset.css": "^0.11.0",
 		"@sanity/client": "^6.28.0",
 		"@sanity/image-url": "^1.1.0",
-		"@theatre/core": "^0.7.2",
-		"@theatre/studio": "^0.7.2",
 		"@threlte/core": "^8.0.1",
 		"@threlte/extras": "^9.0.1",
-		"@threlte/theatre": "^3.0.0",
 		"groq": "^3.76.1",
 		"gsap": "^3.12.7",
 		"three": "^0.173.0"

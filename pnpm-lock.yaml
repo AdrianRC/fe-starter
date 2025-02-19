@@ -17,21 +17,12 @@ importers:
       '@sanity/image-url':
         specifier: ^1.1.0
         version: 1.1.0
-      '@theatre/core':
-        specifier: ^0.7.2
-        version: 0.7.2
-      '@theatre/studio':
-        specifier: ^0.7.2
-        version: 0.7.2(@theatre/core@0.7.2)
       '@threlte/core':
         specifier: ^8.0.1
         version: 8.0.1(svelte@5.20.2)(three@0.173.0)
       '@threlte/extras':
         specifier: ^9.0.1
         version: 9.0.1(@types/three@0.173.0)(svelte@5.20.2)(three@0.173.0)
-      '@threlte/theatre':
-        specifier: ^3.0.0
-        version: 3.0.0(@theatre/core@0.7.2)(@theatre/studio@0.7.2(@theatre/core@0.7.2))(@threlte/core@8.0.1(svelte@5.20.2)(three@0.173.0))(@threlte/extras@9.0.1(@types/three@0.173.0)(svelte@5.20.2)(three@0.173.0))(svelte@5.20.2)(three@0.173.0)
       groq:
         specifier: ^3.76.1
         version: 3.76.1
@@ -1734,17 +1725,6 @@ packages:
       svelte: ^5.0.0
       vite: ^6.0.0
 
-  '@theatre/core@0.7.2':
-    resolution: {integrity: sha512-IDQa/6WY7mIJAtsSd4EgNcM0IUZkl+FrqZ8DdYiCVTFap9ARDNmrngJOeFjJOsnnaHlc5GdEB/jj7fsjbIrAzQ==}
-
-  '@theatre/dataverse@0.7.2':
-    resolution: {integrity: sha512-YyfoyX7EyhFUY2OM5fsM0LPrs1SdgLwpiTMkkvTIoZLdOwvQhstjYq4Yz/8ZncJlRoTWvakfmgvCaBN+QuBYxg==}
-
-  '@theatre/studio@0.7.2':
-    resolution: {integrity: sha512-p6LTKzJWVlcHkpGzIlNHh9AkGbB3E+0q9Pjxv+OJoTDe1IK+CMKW695Wp+1//lB4vfC9qShe4z/p+Zaj1q8KtA==}
-    peerDependencies:
-      '@theatre/core': '*'
-
   '@threejs-kit/instanced-sprite-mesh@2.5.0':
     resolution: {integrity: sha512-W4cRK7f1o15GtacvLi8h1022ySiMM5218eZJQYWHbVGKqpRezmj8hscdzgp4JFSCkRoAIdyIdLZg5U0Mtmcu/w==}
     peerDependencies:
@@ -1760,16 +1740,6 @@ packages:
     resolution: {integrity: sha512-xI0s5a/9NdBbUSaYCnTHfnVl44kZQUTuTPfzwv4gmMM2r2HewM5QsMDBBwBTcuVcYqkM9aUKl+5MWa20LnH/mg==}
     peerDependencies:
       svelte: '>=5'
-      three: '>=0.155'
-
-  '@threlte/theatre@3.0.0':
-    resolution: {integrity: sha512-p5gF4Mu9fRaT6tWiWvHdxjuXf1QAtD7fOnqpIzzA5QYGN3i22CFuwGgb/cd7RxlpWQWp1ZZd5lPdhHWEU638cA==}
-    peerDependencies:
-      '@theatre/core': '>=0.6'
-      '@theatre/studio': '>=0.6'
-      '@threlte/core': '>=8.0.0-next.0'
-      '@threlte/extras': '>=9.0.0-next.0'
-      svelte: '>=4'
       three: '>=0.155'
 
   '@trysound/sax@0.2.0':
@@ -3061,9 +3031,6 @@ packages:
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
-
-  lodash-es@4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
 
   lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
@@ -6330,19 +6297,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@theatre/core@0.7.2':
-    dependencies:
-      '@theatre/dataverse': 0.7.2
-
-  '@theatre/dataverse@0.7.2':
-    dependencies:
-      lodash-es: 4.17.21
-
-  '@theatre/studio@0.7.2(@theatre/core@0.7.2)':
-    dependencies:
-      '@theatre/core': 0.7.2
-      '@theatre/dataverse': 0.7.2
-
   '@threejs-kit/instanced-sprite-mesh@2.5.0(@types/three@0.173.0)(three@0.173.0)':
     dependencies:
       diet-sprite: 0.0.1
@@ -6372,15 +6326,6 @@ snapshots:
       troika-three-text: 0.50.3(three@0.173.0)
     transitivePeerDependencies:
       - '@types/three'
-
-  '@threlte/theatre@3.0.0(@theatre/core@0.7.2)(@theatre/studio@0.7.2(@theatre/core@0.7.2))(@threlte/core@8.0.1(svelte@5.20.2)(three@0.173.0))(@threlte/extras@9.0.1(@types/three@0.173.0)(svelte@5.20.2)(three@0.173.0))(svelte@5.20.2)(three@0.173.0)':
-    dependencies:
-      '@theatre/core': 0.7.2
-      '@theatre/studio': 0.7.2(@theatre/core@0.7.2)
-      '@threlte/core': 8.0.1(svelte@5.20.2)(three@0.173.0)
-      '@threlte/extras': 9.0.1(@types/three@0.173.0)(svelte@5.20.2)(three@0.173.0)
-      svelte: 5.20.2
-      three: 0.173.0
 
   '@trysound/sax@0.2.0': {}
 
@@ -7806,8 +7751,6 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
-
-  lodash-es@4.17.21: {}
 
   lodash.memoize@4.1.2: {}
 
